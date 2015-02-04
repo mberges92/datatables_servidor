@@ -3,7 +3,7 @@
        $('#miTabla').DataTable({
            'processing': true,
            'serverSide': true,
-           'ajax': 'php/cargar_clinicas.php',
+           'ajax': 'php/cargar_clinicas_mejor.php',
            'language': {
                'sProcessing': 'Procesando...',
                'sLengthMenu': 'Mostrar _MENU_ registros',
@@ -27,6 +27,30 @@
                    'sSortAscending': ': Activar para ordenar la columna de manera ascendente',
                    'sSortDescending': ': Activar para ordenar la columna de manera descendente'
                }
-           }
+           },
+           'columns': [{
+               'data': 'id_clinica'
+           }, {
+               'data': 'nombre'
+           }, {
+               'data': 'razonsocial'
+           }, {
+               'data': 'cif'
+           }, {
+               'data': 'localidad'
+           }, {
+               'data': 'provincia'
+           }, {
+               'data': 'direccion'
+           }, {
+               'data': 'numclinica'
+           }, {
+               'data': 'id_tarifa'
+           }, {
+               'data': 'id_clinica',
+               'render': function(data) {
+                   return '<a href="' + data + '">Download</a>';
+               }
+           }]
        });
    });
