@@ -16,7 +16,7 @@ En vez de obtener:
 5: ["6", "CENTRO DE IMPLANTOLOGÍA SANTANDER", "XX", "B11111116", "SANTANDER", "SANTANDER",…]
 6: ["15", "CENTRO DE IMPLANTOLOGÍA TARRAGONA", "XX", "B11111117", "MADRID", "TARRAGONA",…]
 ~~~
-Deberíamos obtener:
+    Deberíamos obtener:
 ~~~
 0: {id_clinica: "1", nombre: "CENTRO IMPLANTOLOGICO BARCELONA", razonsocial: "XX", cif: "B11111111",…}
 1: {id_clinica: "2", nombre: "CENTRO DE IMPLANTOLOGÍA MADRID", razonsocial: "XX", cif: "B11111112",…}
