@@ -26,6 +26,7 @@ Deberíamos obtener:
 5: {id_clinica: "6", nombre: "CENTRO DE IMPLANTOLOGÍA SANTANDER", razonsocial: "XX", cif: "B11111116",…}
 6: {id_clinica: "15", nombre: "CENTRO DE IMPLANTOLOGÍA TARRAGONA", razonsocial: "XX", cif: "B11111117",…}
 ~~~
+
 4. Añade en cada registro de la tabla anterior un botón de editar y otro de borrar. Los botones deben enlazar a una url donde se pase un parámetro identificador del registro en cuestión. Puedes y debes utilizar la propiedad fnRender. Consulta la documentación del plugin de datatables para obtener más información.
 
 5. Añade a la tabla anterior el tipo de tarifa de la clínica. Puedes echar un ojo al fichero de ayuda, si no se te ocurre como empezar.
