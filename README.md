@@ -8,16 +8,16 @@ Para obtener los datos del servidor puedes ayudarte del script que proporciona d
 3. Modifica el ejercicio anterior para que el json de datos o obtenido sean objetos en vez de un array. En vez de obtener:
 
    ~~~
-   0: ["1", "CENTRO IMPLANTOLOGICO BARCELONA", "XX", "B11111111", "BARCELONA", "BARCELONA",…]
-   1: ["2", "CENTRO DE IMPLANTOLOGÍA MADRID", "XX", "B11111112", "MADRID", "MADRID",…]
-   2: ["3", "CENTRO DE IMPLANTOLOGÍA VIGO", "XX", "B11111113", "VIGO", "PONTEVEDRA", "Calle de Vigo nº 17",…]
-   3: ["4", "CENTRO DE IMPLANTOLOGÍA ZARAGOZA", "XX", "B11111114", "ZARAGOZA", "ZARAGOZA",…]
-   4: ["5", "CENTRO DE IMPLANTOLOGÍA VALENCIA", "XX", "B11111115", "VALENCIA", "VALENCIA",…]
-   5: ["6", "CENTRO DE IMPLANTOLOGÍA SANTANDER", "XX", "B11111116", "SANTANDER", "SANTANDER",…]
-   6: ["15", "CENTRO DE IMPLANTOLOGÍA TARRAGONA", "XX", "B11111117", "MADRID", "TARRAGONA",…]
+0: ["1", "CENTRO IMPLANTOLOGICO BARCELONA", "XX", "B11111111", "BARCELONA", "BARCELONA",…]
+1: ["2", "CENTRO DE IMPLANTOLOGÍA MADRID", "XX", "B11111112", "MADRID", "MADRID",…]
+2: ["3", "CENTRO DE IMPLANTOLOGÍA VIGO", "XX", "B11111113", "VIGO", "PONTEVEDRA", "Calle de Vigo nº 17",…]
+3: ["4", "CENTRO DE IMPLANTOLOGÍA ZARAGOZA", "XX", "B11111114", "ZARAGOZA", "ZARAGOZA",…]
+4: ["5", "CENTRO DE IMPLANTOLOGÍA VALENCIA", "XX", "B11111115", "VALENCIA", "VALENCIA",…]
+5: ["6", "CENTRO DE IMPLANTOLOGÍA SANTANDER", "XX", "B11111116", "SANTANDER", "SANTANDER",…]
+6: ["15", "CENTRO DE IMPLANTOLOGÍA TARRAGONA", "XX", "B11111117", "MADRID", "TARRAGONA",…]
   ~~~
 
-
+   Deberíamos obtener:
 
    ~~~
 0: {id_clinica: "1", nombre: "CENTRO IMPLANTOLOGICO BARCELONA", razonsocial: "XX", cif: "B11111111",…}
