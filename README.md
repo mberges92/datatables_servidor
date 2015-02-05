@@ -5,8 +5,7 @@ Se proporciona también una exportación de la bbdd para poder hacer la importac
 2. Usa el plugin datatables para crear una tabla html que muestre los campos Nombre, Cif, Localidad,  Provincia y id_clinica de la tabla de bbdd del ejercicio anterior. 
 Para obtener los datos del servidor puedes ayudarte del script que proporciona datatables en el ejemplo “DataTables server-side processing example”.
 
-3. Modifica el ejercicio anterior para que el json de datos o obtenido sean objetos en vez de un array. 
-En vez de obtener:
+3. Modifica el ejercicio anterior para que el json de datos o obtenido sean objetos en vez de un array. En vez de obtener:
 
 ~~~
 0: ["1", "CENTRO IMPLANTOLOGICO BARCELONA", "XX", "B11111111", "BARCELONA", "BARCELONA",…]
