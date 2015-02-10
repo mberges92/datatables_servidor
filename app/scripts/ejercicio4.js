@@ -49,8 +49,15 @@
            }, {
                'data': 'id_clinica',
                'render': function(data) {
-                   return '<a href="' + data + '">Download</a>';
+                   return '<a class="btn btn-primary" href=http://localhost/php/editar.php?id_clinica=' + data + '>Editar</a><a class="btn btn-warning" href=http://localhost/php/borrar.php?id_clinica=' + data + '>Borrar</a>';
                }
            }]
        });
    });
+
+/* En http://www.datatables.net/reference/option/ hemos encontrado la ayuda necesaria
+para utilizar el API de datatables para el render de los botones */
+/* Para renderizar los botones según bootstrap, la url es esta: 
+http://getbootstrap.com/css/#buttons
+*/
+
