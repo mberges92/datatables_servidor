@@ -1,9 +1,9 @@
    'use strict';
    $(document).ready(function() {
-       $('#miTabla').DataTable({
+       var miTabla= $('#miTabla').DataTable({
            'processing': true,
            'serverSide': true,
-           'ajax': 'php/cargar_clinicas_mejor.php',
+           'ajax': 'php/cargar_vclinicas_mejor.php',
            'language': {
                'sProcessing': 'Procesando...',
                'sLengthMenu': 'Mostrar _MENU_ registros',
@@ -47,17 +47,44 @@
            }, {
                'data': 'idTarifa'
            }, {
+               'data': 'nombreTarifa'
+           }, {
                'data': 'idClinica',
+               /*añadimos las clases editarbtn y borrarbtn para procesar los eventos click de los botones. No lo hacemos mediante id ya que habrá más de un
+               botón de edición o borrado*/
                'render': function(data) {
-                   return '<a class="btn btn-primary" href=http://localhost/php/editar.php?id_clinica=' + data + '>Editar</a><a class="btn btn-warning" href=http://localhost/php/borrar.php?id_clinica=' + data + '>Borrar</a>';
+                   return '<a class="btn btn-primary editarbtn" href=http://localhost/php/editar.php?id_clinica=' + data + '>Editar</a><a class="btn btn-warning borrarbtn" href=http://localhost/php/borrar.php?id_clinica=' + data + '>Borrar</a>';
                }
            }]
        });
+
+       /*Creamos la función que muestre el formulario cuando hagamos click*/
+       /*ojo, es necesario hacerlo con el método ON. Tanto por rendimiento como porque puede haber elementos (botones) que todavía no existan en el document.ready*/
+       $('#miTabla').on('click', '.editarbtn', function(e) {
+           e.preventDefault();
+           $('#tabla').fadeOut(100);
+           $('#formulario').fadeIn(100);
+
+           var nRow = $(this).parents('tr')[0];
+           var aData = miTabla.row(nRow).data();
+           $('#idClinica').val(aData.idClinica);
+           $('#nombre').val(aData.nombre);
+           $('#numClinica').val(aData.numclinica);
+           $('#razonSocial').val(aData.razonsocial);
+           $('#cif').val(aData.cif);
+           $('#localidad').val(aData.localidad);
+           $('#provincia').val(aData.provincia);
+           $('#direccion').val(aData.direccion);
+           $('#cp').val(aData.cp);
+       });
+
+
+
+
    });
 
-/* En http://www.datatables.net/reference/option/ hemos encontrado la ayuda necesaria
-para utilizar el API de datatables para el render de los botones */
-/* Para renderizar los botones según bootstrap, la url es esta: 
-http://getbootstrap.com/css/#buttons
-*/
-
+   /* En http://www.datatables.net/reference/option/ hemos encontrado la ayuda necesaria
+   para utilizar el API de datatables para el render de los botones */
+   /* Para renderizar los botones según bootstrap, la url es esta: 
+   http://getbootstrap.com/css/#buttons
+   */
