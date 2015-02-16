@@ -33,6 +33,7 @@ $columns = array(
     array( 'db' => 'nombre',  'dt' => 'nombre' ),
     array( 'db' => 'razonsocial',   'dt' => 'razonSocial' ),
     array( 'db' => 'cif',     'dt' => 'cif' ),
+    array( 'db' => 'cp',     'dt' => 'cp' ),
     array( 'db' => 'localidad', 'dt' => 'localidad' ),
     array( 'db' => 'provincia',  'dt' => 'provincia' ),
     array( 'db' => 'direccion',   'dt' => 'direccion' ),

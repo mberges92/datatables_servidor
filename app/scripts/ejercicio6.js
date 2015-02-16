@@ -1,6 +1,6 @@
    'use strict';
    $(document).ready(function() {
-       var miTabla= $('#miTabla').DataTable({
+       var miTabla = $('#miTabla').DataTable({
            'processing': true,
            'serverSide': true,
            'ajax': 'php/cargar_vclinicas_mejor.php',
@@ -43,6 +43,8 @@
            }, {
                'data': 'direccion'
            }, {
+               'data': 'cp'
+           }, {
                'data': 'numClinica'
            }, {
                'data': 'idTarifa'
@@ -69,11 +71,16 @@
            var aData = miTabla.row(nRow).data();
            $('#idClinica').val(aData.idClinica);
            $('#nombre').val(aData.nombre);
-           $('#numClinica').val(aData.numclinica);
-           $('#razonSocial').val(aData.razonsocial);
+           $('#numClinica').val(aData.numClinica);
+           $('#razonSocial').val(aData.razonSocial);
            $('#cif').val(aData.cif);
            $('#localidad').val(aData.localidad);
+           /*lo más cómodo para la provincia sería esto:
            $('#provincia').val(aData.provincia);
+           pero como el valor de la provincia viene con digitos en el html (atributo val), tenemos que selecionar por el texto contenido:*/
+           $('#provincia option').filter(function() {
+               return this.text.toLowerCase() === aData.provincia.toLowerCase();
+           }).attr('selected', true);
            $('#direccion').val(aData.direccion);
            $('#cp').val(aData.cp);
        });
