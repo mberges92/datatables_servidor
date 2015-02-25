@@ -29,17 +29,16 @@ $primaryKey = 'id_clinica';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-    array( 'db' => 'id_clinica', 'dt' => 'idClinica' ),
+    array( 'db' => 'id_clinica', 'dt' => 'id_clinica' ),
     array( 'db' => 'nombre',  'dt' => 'nombre' ),
-    array( 'db' => 'razonsocial',   'dt' => 'razonSocial' ),
+    array( 'db' => 'razonsocial',   'dt' => 'razonsocial' ),
     array( 'db' => 'cif',     'dt' => 'cif' ),
-    array( 'db' => 'cp',     'dt' => 'cp' ),
     array( 'db' => 'localidad', 'dt' => 'localidad' ),
     array( 'db' => 'provincia',  'dt' => 'provincia' ),
     array( 'db' => 'direccion',   'dt' => 'direccion' ),
-    array( 'db' => 'numclinica',     'dt' => 'numClinica' ),
-    array( 'db' => 'id_tarifa',     'dt' => 'idTarifa' ),
-    array( 'db' => 'nombretarifa',     'dt' => 'nombreTarifa' )
+    array( 'db' => 'numclinica',     'dt' => 'numclinica' ),
+    array( 'db' => 'id_tarifa',     'dt' => 'id_tarifa' ),
+    array( 'db' => 'nombretarifa',     'dt' => 'nombretarifa' )
 );
  
 // SQL server connection information

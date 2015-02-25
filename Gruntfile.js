@@ -19,7 +19,7 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: '/var/www/html/datatables2'
+    dist: '/var/www/datatables2'
   };
 
   // Define the configuration for all the tasks
@@ -164,7 +164,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/ejercicio*.html'],
+        src: ['<%= config.app %>/index.html'],
         exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']
       }
     },
@@ -191,7 +191,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/ejercicio*.html'
+      html: '<%= config.app %>/index.html'
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
